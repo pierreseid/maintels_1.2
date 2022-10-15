@@ -1,0 +1,16 @@
+{% extends "layout.html.twig" %}
+
+{% block title %}
+    details du user {{user.titre }}
+{% endblock %}
+
+{% block content %}
+<div class="text-center">
+    <h1> Detail du user n° {{ user.id }}</h1>
+    <h6 class="text-muted"><strong>date d'ajout : </strong> {{ user.dateEnregistrement | date('d/m/Y \à H\\hi') }}</h6>
+    <h5><strong>email : </strong> {{ user.email }}</h5>
+    <h5><strong>role : </strong> {{ user.role }}</h5>
+    <h5><strong>password : </strong> {{ user.password }}</h5>
+    
+</div>
+{% endblock %}
